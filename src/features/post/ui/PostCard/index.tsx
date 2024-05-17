@@ -9,10 +9,20 @@ type CarProps = {
 export const PostCard = ({ car }: CarProps) => {
   const models = useFetch(`/model/${car.id}`);
   console.log(models);
+  const Amodels = Array.isArray(models) ? (
+    models.map((models, index) => (
+      <span key={index}>
+        {models.name}
+        <br />
+      </span>
+    ))
+  ) : (
+    <span>ERROR</span>
+  );
   return (
     <div className={styles.postCard}>
       <h2>{car.name}</h2>
-      {/* <h4>{models.name}</h4> */}
+      <div>{Amodels}</div>
     </div>
   );
 };
