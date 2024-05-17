@@ -1,3 +1,4 @@
+import { useFetch } from 'features/hooks/useFetch';
 import { Car } from '../../model/types';
 import styles from './post.module.css';
 
@@ -6,9 +7,12 @@ type CarProps = {
 };
 
 export const PostCard = ({ car }: CarProps) => {
+  const models = useFetch(`/model/${car.id}`);
+  console.log(models);
   return (
     <div className={styles.postCard}>
       <h2>{car.name}</h2>
+      {/* <h4>{models.name}</h4> */}
     </div>
   );
 };
