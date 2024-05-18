@@ -2,8 +2,10 @@
   "name": "webpack-configuration",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://dimangis.github.io/IXORA",
   "main": "index.js",
   "scripts": {
+    "deploy": "npm run build && gh-pages -d build",
     "build": "webpack",
     "start": "webpack serve --env MODE=development PORT=3000"
   },
@@ -30,6 +32,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-webpack-plugin": "^4.0.1",
     "fork-ts-checker-webpack-plugin": "^9.0.2",
+    "gh-pages": "^6.1.1",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.7.6",
