@@ -1,7 +1,7 @@
 {
-  "name": "ixora",
+  "name": "webpack-configuration",
   "version": "1.0.0",
-  "description": "this is test task",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
@@ -38,18 +38,20 @@
     "prettier": "^3.1.1",
     "tsconfig-paths-webpack-plugin": "^4.1.0",
     "typescript": "^5.3.3",
+    "typescript-plugin-css-modules": "^5.0.2",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@mui/material": "^5.15.18",
-    "@mui/styled-engine-sc": "^6.0.0-alpha.18",
-    "axios": "^1.6.8",
-    "clsx": "^2.1.0",
+    "axios": "^1.6.7",
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "styled-components": "^6.1.11"
+    "react-hook-form": "^7.50.1",
+    "react-select": "^5.8.0"
   }
 }

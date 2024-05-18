@@ -1,0 +1,9 @@
+.text_container{
+border-top: 1px solid black;
+margin-top: 5px;
+padding-top: 10px;
+padding-bottom: 5px;
+}
+.list{
+    padding-left: 0;
+}

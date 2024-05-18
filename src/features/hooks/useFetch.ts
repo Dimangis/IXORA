@@ -1,8 +1,11 @@
+import { Car, Model, Param } from 'features/post/types';
 import { get } from 'features/services/transpot';
 import { useEffect, useState } from 'react';
 
+type FetchState = Car[] | Model[] | Param[] | null;
+
 export const useFetch = (url: string, params?: string) => {
-  const [state, setState] = useState({});
+  const [state, setState] = useState<FetchState>(null);
 
   useEffect(() => {
     (async () => {
@@ -10,12 +13,12 @@ export const useFetch = (url: string, params?: string) => {
         const response = await get(url);
         const timeoutId = setTimeout(() => {
           setState(response.data);
-        }, 3000);
+        }, 1000);
       } catch (error) {
         console.error('GETPOST', error);
       }
     })();
-  }, [url]);
+  }, [url, params]);
 
   return state;
 };
