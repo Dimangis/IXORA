@@ -1,11 +1,11 @@
 import { createRoot } from 'react-dom/client';
 import 'normalize.css';
-import Router from 'router/router';
+import { App } from 'app';
 
 const app = document.getElementById('app');
 
 if (app) {
   const root = createRoot(app);
 
-  root.render(<Router />);
+  root.render(<App />);
 }

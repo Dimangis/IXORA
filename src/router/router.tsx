@@ -1,11 +1,12 @@
-import { App } from 'app';
-
-import { HashRouter } from 'react-router-dom';
+import { HomePage } from 'pages/homePage';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
 function Router() {
   return (
     <HashRouter>
-      <App />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
     </HashRouter>
   );
 }
